@@ -1,0 +1,10 @@
+.myHr {
+  border-style: dotted;
+  border-top-style: none;
+
+  width: 20%;
+  border-color: rebeccapurple;
+
+  border-right-style: none;
+  border-left-style: none;
+}

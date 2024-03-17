@@ -1,0 +1,7 @@
+User-agent: Unnecessarybot
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://synergylifelineconsulting.com/sitemap.xml
