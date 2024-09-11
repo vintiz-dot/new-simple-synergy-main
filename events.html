@@ -2,14 +2,20 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CD3RN8K652"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CD3RN8K652');
+</script>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
   <title>Synergy Lifeline Consulting</title>
-  <meta
-    content="Synergy Lifeline Consulting is an Educational Consulting firm located in Abuja Nigeria. Our services includes -Test preparation, study visa application assistance amongst others"
-    name="description"
-  />
+  <meta content="Synergy Lifeline Consulting is an Educational Consulting firm located in Abuja Nigeria. Our services include -Test preparation, study visa application assistance amongst others" name="description" />
   <meta content="IELTS GRE SAT PTE TOEFL GMAT STUDY VISA" name="keywords" />
 
   <!-- Favicons -->
@@ -17,10 +23,7 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -29,20 +32,18 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
 
-  <!-- Google API -->
-  <script src="https://apis.google.com/js/api.js" async defer onload="handleClientLoad()"></script>
-
-  <!-- Custom JS for Form Handling -->
-  <script defer src="scripts/formHandler.js"></script>
-
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("aAS2beu7Twp64U6jd");
+    })();
+  </script>
 </head>
 
 <body>
-  <body onload="handleClientLoad()">
-
   <!-- Call us footer -->
-  <div class="breadcrumbs bg-warning col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-in"
-    style="position: fixed; bottom: 0; z-index: 100; width: 100%; padding-top: 20px; height: 15%;">
+  <div class="breadcrumbs bg-warning col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-in" style="position: fixed; bottom: 0; z-index: 100; width: 100%; padding-top: 20px; height: 15%;">
     <div>
       <h4>
         <a href="tel:+2348186566561" style="color:white; text-align: center; font-size: 100%;">
@@ -81,7 +82,6 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
-      <!-- .navbar -->
       <a href="courses.html" class="get-started-btn">Get Started</a>
     </div>
   </header>
@@ -96,12 +96,6 @@
       </div>
     </div>
     <!-- End Breadcrumbs -->
-
-    <!-- Google Sign-In/Sign-Out -->
-    <div class="container text-center my-3">
-      <button id="signin-button" class="btn btn-primary" disabled>Sign in with Google</button>
-      <button id="signout-button" class="btn btn-secondary" style="display:none;">Sign out</button>
-    </div>
 
     <!-- Registration Form -->
     <div class="container mt-5">
@@ -162,24 +156,45 @@
             <div class="invalid-feedback">Please select the class type.</div>
           </div>
 
-          <div id="privateClassHours" class="form-group mb-4" style="display: none;">
-            <label for="privateHours">Select Private Class Hours Per Month</label>
-            <select class="form-control" id="privateHours">
-              <option value="" disabled selected>Select hours</option>
-              <option value="16">16 Hours</option>
-              <option value="24">24 Hours</option>
-              <option value="32">32 Hours</option>
-              <option value="36">36 Hours</option>
-              <option value="40">40 Hours</option>
-              <option value="48">48 Hours</option>
+          <!-- Group Class Dropdown -->
+          <div id="groupClassCourses" class="form-group mb-4" style="display: none;">
+            <label for="groupCourse">Select Group Class</label>
+            <select class="form-control" id="groupCourse">
+              <option value="" disabled selected>Select course</option>
+              <option value="IELTS">IELTS</option>
+              <option value="GRE">GRE</option>
+              <option value="GMAT">GMAT</option>
+              <option value="TOEFL">TOEFL</option>
+              <option value="PTE">PTE</option>
+              <option value="SAT">SAT</option>
             </select>
-            <div class="invalid-feedback">Please select the number of hours for private classes.</div>
           </div>
 
-          <div class="form-group mb-4">
-            <label for="course">Course (e.g., IELTS, GRE, GMAT, etc.)</label>
-            <input type="text" class="form-control" id="course" placeholder="Enter the course name" required>
-            <div class="invalid-feedback">Please enter the course name.</div>
+          <!-- Private Class Location and Hours -->
+          <div id="privateClassOptions" style="display: none;">
+            <div class="form-group mb-4">
+              <label for="privateLocation">Class Location</label>
+              <select class="form-control" id="privateLocation" required>
+                <option value="" disabled selected>Select Location</option>
+                <option value="center">Synergy Lifeline Center</option>
+                <option value="client-location">Client's Preferred Location</option>
+              </select>
+              <div class="invalid-feedback">Please select the class location.</div>
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="privateHours">Select Private Class Hours Per Month</label>
+              <select class="form-control" id="privateHours" required>
+                <option value="" disabled selected>Select hours</option>
+                <option value="16">16 Hours</option>
+                <option value="24">24 Hours</option>
+                <option value="32">32 Hours</option>
+                <option value="36">36 Hours</option>
+                <option value="40">40 Hours</option>
+                <option value="48">48 Hours</option>
+              </select>
+              <div class="invalid-feedback">Please select the number of hours for private classes.</div>
+            </div>
           </div>
 
           <div class="form-group mb-4">
@@ -228,11 +243,10 @@
         </div>
 
         <!-- Submit Button -->
-        <button type="button" id="submit-button" class="btn btn-primary" disabled>Register</button>
+        <button type="button" id="submit-button" class="btn btn-primary" onclick="validateForm()">Register</button>
       </form>
     </div>
   </main>
-  <!-- End #main -->
 
   <!-- Footer Section -->
   <footer id="footer">
@@ -242,11 +256,8 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Synergy Lifeline Consulting</h3>
             <p>
-              <a href="https://goo.gl/maps/9ya5d8BmSUvFZv9u7">
-                4th Floor NICON Insurance Plaza
-              </a><br>
-              Central Business District,<br>
-              Abuja, Nigeria.<br>
+              <a href="https://goo.gl/maps/9ya5d8BmSUvFZv9u7">4th Floor NICON Insurance Plaza</a><br>
+              Central Business District,<br>Abuja, Nigeria.<br>
               <strong>Phone:</strong> <a href="tel:+2348186566561">+2348186566561</a><br>
               <strong>Email:</strong> <a href="mailto:info@synergylifelineconsulting.com">info@synergylifelineconsulting.com</a><br>
             </p>
@@ -283,22 +294,20 @@
         <div class="copyright">
           &copy; Copyright <strong><span>Synergy LifeLine Consulting</span></strong>. All Rights Reserved
         </div>
-        <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">Victor Moronu</a>
-        </div>
+        <div class="credits">Designed by <a href="https://bootstrapmade.com/">Victor Moronu</a></div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
         <a href="https://web.facebook.com/synergylifeline/" class="facebook"><i class="bx bxl-facebook"></i></a>
       </div>
     </div>
   </footer>
-  <!-- End Footer -->
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+  <!-- JavaScript for form handling -->
+  <script src="scripts/formHandler.js"></script>
 </body>
 
 </html>
