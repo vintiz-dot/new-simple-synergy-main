@@ -3,14 +3,14 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CD3RN8K652"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CD3RN8K652"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-CD3RN8K652');
-</script>
+    gtag('config', 'G-CD3RN8K652');
+  </script>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -39,6 +39,15 @@
       emailjs.init("aAS2beu7Twp64U6jd");
     })();
   </script>
+  <!-- Include jQuery first -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript for form handling -->
+  <script defer src="scripts/formHandler.js"></script>
 </head>
 
 <body>
@@ -97,32 +106,31 @@
     </div>
     <!-- End Breadcrumbs -->
 
-    <!-- Registration Form -->
     <div class="container mt-5">
       <h2 class="mb-4">Student Registration Form</h2>
       <form id="registrationForm" novalidate>
         <!-- Personal Information -->
         <div class="form-group mb-4">
           <label for="fullName">Full Name</label>
-          <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+          <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required />
           <div class="invalid-feedback">Please enter your full name.</div>
         </div>
 
         <div class="form-group mb-4">
           <label for="dob">Date of Birth</label>
-          <input type="date" class="form-control" id="dob" required>
+          <input type="date" class="form-control" id="dob" required />
           <div class="invalid-feedback">Please enter your date of birth.</div>
         </div>
 
         <div class="form-group mb-4">
           <label for="email">Email Address</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
           <div class="invalid-feedback">Please enter a valid email address.</div>
         </div>
 
         <div class="form-group mb-4">
           <label for="phone">Phone Number</label>
-          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required />
           <div class="invalid-feedback">Please enter a valid phone number.</div>
         </div>
 
@@ -135,7 +143,7 @@
         <!-- Registration Type Selection -->
         <div class="form-group mb-4">
           <label for="registrationType">I want to register for:</label>
-          <select class="form-control" id="registrationType" onchange="toggleRegistrationOptions()" required>
+          <select class="form-control" id="registrationType" required>
             <option value="" disabled selected>Select an option</option>
             <option value="classes">Classes</option>
             <option value="exam">Exam</option>
@@ -148,7 +156,7 @@
         <div id="classRegistrationSection" style="display: none;">
           <div class="form-group mb-4">
             <label for="classType">Class Type</label>
-            <select class="form-control" id="classType" onchange="toggleClassOptions()" required>
+            <select class="form-control" id="classType" required>
               <option value="" disabled selected>Select Class Type</option>
               <option value="group">Group Class</option>
               <option value="private">Private Class</option>
@@ -183,23 +191,30 @@
             </div>
 
             <div class="form-group mb-4">
-              <label for="privateHours">Select Private Class Hours Per Month</label>
-              <select class="form-control" id="privateHours" required>
-                <option value="" disabled selected>Select hours</option>
-                <option value="16">16 Hours</option>
-                <option value="24">24 Hours</option>
-                <option value="32">32 Hours</option>
-                <option value="36">36 Hours</option>
-                <option value="40">40 Hours</option>
-                <option value="48">48 Hours</option>
+              <label for="privateSchedule">Select Private Class Schedule</label>
+              <select class="form-control" id="privateSchedule" required>
+                <option value="" disabled selected>Select hours & contacts</option>
+                <option value="2-contacts-2-hours">2 hrs 2 times a week</option>
+                <option value="3-contacts-2-hours">2 hrs 3 times a week</option>
+                <option value="2-contacts-3-hours">3 hrs 2 times a week</option>
+                <option value="3-contacts-3-hours">3 hrs 3 times a week</option>
+                <option value="4-contacts-2-hours">2 hrs 4 times a week</option>
+                <option value="5-contacts-2-hours">2 hrs 5 times a week</option>
+                <option value="4-contacts-3-hours">3 hrs 4 times a week</option>
+                <option value="5-contacts-3-hours">3 hrs 5 times a week</option>
+                <option value="6-contacts-2-hours">2 hrs 6 times a week</option>
+                <option value="6-contacts-3-hours">3 hrs 6 times a week</option>
+                <option value="7-contacts-2-hours">2 hrs 7 times a week</option>
+                <option value="7-contacts-3-hours">3 hrs 7 times a week</option>
               </select>
-              <div class="invalid-feedback">Please select the number of hours for private classes.</div>
+              <div class="invalid-feedback">Please select the schedule for private classes.</div>
             </div>
+
           </div>
 
           <div class="form-group mb-4">
             <label for="classStartDate">Class Start Date</label>
-            <input type="date" class="form-control" id="classStartDate" required>
+            <input type="date" class="form-control" id="classStartDate" required />
             <div class="invalid-feedback">Please select the class start date.</div>
           </div>
         </div>
@@ -208,7 +223,7 @@
         <div id="examRegistrationSection" style="display: none;">
           <div class="form-group mb-4">
             <label for="examType">Exam Type</label>
-            <select class="form-control" id="examType" onchange="toggleIeltsOptions()" required>
+            <select class="form-control" id="examType" required>
               <option value="" disabled selected>Select Exam Type</option>
               <option value="ielts">IELTS</option>
               <option value="gre">GRE</option>
@@ -229,25 +244,56 @@
             <div class="invalid-feedback">Please select your IELTS exam type.</div>
           </div>
 
+          <!-- IELTS Mode Selection -->
+          <div id="ieltsOptions" class="form-group mb-4" style="display: none;">
+            <label for="ieltsMode">Select IELTS Mode</label>
+            <select class="form-control" id="ieltsMode" required>
+              <option value="" disabled selected>Select IELTS Mode</option>
+              <option value="paper">IELTS on Paper</option>
+              <option value="computer">IELTS on Computer</option>
+            </select>
+            <div class="invalid-feedback">Please select the IELTS mode.</div>
+          </div>
+
+          <!-- IELTS Exam Type Selection -->
+          <div id="ieltsCategory" class="form-group mb-4" style="display: none;">
+            <label for="ieltsCategory">Select IELTS Exam Type</label>
+            <select class="form-control" id="ieltsCategoryExam" required>
+              <option value="" disabled selected>Select IELTS Exam Type</option>
+              <option value="academic">Academic</option>
+              <option value="general">General Training</option>
+              <option value="ukvi">IELTS for UKVI</option>
+            </select>
+            <div class="invalid-feedback">Please select the IELTS exam type.</div>
+          </div>
+
           <div class="form-group mb-4">
             <label for="examDate">Preferred Exam Date</label>
-            <input type="date" class="form-control" id="examDate" required>
+            <input type="date" class="form-control" id="examDate" required />
             <div class="invalid-feedback">Please select your preferred exam date.</div>
           </div>
 
           <div class="form-group mb-4">
             <label for="passportCopy">Upload Passport Data Page</label>
-            <input type="file" class="form-control" id="passportCopy" required>
+            <input type="file" class="form-control" id="passportCopy" required />
             <div class="invalid-feedback">Please upload your passport data page.</div>
           </div>
         </div>
 
+        <!-- Total Cost Display -->
+        <div class="form-group mb-4">
+          <h4>Total Cost: <span id="totalCost">₦0</span></h4>
+        </div>
+
         <!-- Submit Button -->
-        <button type="button" id="submit-button" class="btn btn-primary" onclick="validateForm()">Register</button>
+        <button type="button" id="submit-button" class="btn btn-primary">Register</button>
       </form>
     </div>
-  </main>
 
+    <!-- Include the JavaScript at the end of the body -->
+    <script src="scripts/formHandler.js"></script>
+  </main>
+  
   <!-- Footer Section -->
   <footer id="footer">
     <div class="footer-top">
@@ -302,12 +348,7 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- JavaScript for form handling -->
-  <script src="scripts/formHandler.js"></script>
+
 </body>
 
 </html>

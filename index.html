@@ -10,6 +10,12 @@
 
   gtag('config', 'G-CD3RN8K652');
 </script>
+
+<!-- Event snippet for Website traffic conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-754910464/LnFwCIiP-d4BEICK_OcC'});
+</script>
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -47,8 +53,8 @@
 
     <!-- Template Main CSS File -->
     
-<link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
     
 
       <!-- Vendor JS Files -->
@@ -60,6 +66,7 @@
   
       <!-- Template Main JS File -->
       <script defer src="assets/js/main.js"></script>
+      <script defer src="scripts/prices.js"></script>
   </head>
 
   <body>
@@ -409,7 +416,7 @@
       </section>
       <!-- End Features Section -->
 
-      <!-- ======= Popular Courses Section ======= -->
+ <!-- ======= Popular Courses Section ======= -->
       <section id="popular-courses" class="courses">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
@@ -419,151 +426,49 @@
 
           <div class="row" data-aos="zoom-in" data-aos-delay="100">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="course-item"><a href="ielts-classes.html">
-                <img
-                  src="assets/img/course-1.jpg"
-                  class="img-fluid"
-                  alt="IELTS logo image"
-                />
+              <div class="course-item">
+                <img src="assets/img/course-1.jpg" class="img-fluid" alt="IELTS logo image" />
                 <div class="course-content">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-3"
-                  >
+                  <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4>IELTS Academic Training</h4>
-                    <p class="price">₦80,000</p>
+                    <p class="price" data-price="ielts"></p> <!-- Dynamic price for IELTS -->
                   </div>
-
-                  <h3>
-                    <a href="course-details.html">IELTS Academic Training</a>
-                  </h3></a>
-                  <p>
-                   <strong>IELTS</strong>  (International English Language Testing System), is a
-                    standardised test of English language proficiency. <br><br> It is
-                    jointly managed by University of Cambridge ESOL
-                    Examinations, the British Council and IDP Education Pty Ltd,
-                    and was established in 1989.
-                  </p>
-                  <div
-                    class="trainer d-flex justify-content-between align-items-center"
-                  >
-                    <div class="trainer-profile d-flex align-items-center">
-                      <img
-                        src="assets/img/trainers/trainer-1.jpg"
-                        class="img-fluid"
-                        alt="Mr Ifeanyi's potrait picture"
-                      />
-                      <span>Ifeanyi</span>
-                    </div>
-                    <div class="trainer-rank d-flex align-items-center">
-                   
-                      <i class="bx bx-heart"></i>&nbsp;99
-                    </div>
-                  </div>
+                  <h3><a href="course-details.html">IELTS Academic Training</a></h3>
+                  <p>IELTS is a standardized test of English language proficiency.</p>
                 </div>
               </div>
             </div>
-            <!-- End Course Item-->
 
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
-            >
-              <div class="course-item"><a href="sat-classes.html">
-                <img
-                  src="assets/img/course-2.jpg"
-                  class="img-fluid"
-                  alt="SAT logo image"
-                />
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+              <div class="course-item">
+                <img src="assets/img/course-2.jpg" class="img-fluid" alt="SAT logo image" />
                 <div class="course-content">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-3"
-                  >
+                  <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4>SAT Training</h4>
-                    <p class="price">₦100,000</p>
+                    <p class="price" data-price="sat"></p> <!-- Dynamic price for SAT -->
                   </div>
-
-                  <h3>
-                    <a href="sat-classes.html">SAT Training</a>
-                  </h3></a>
-                  <p>
-                    There are two types of SAT exams: 
-
-                     <ul><li>SAT Reasoning Test popularly known as SAT I</li> <li>SAT Subject Test also known as SAT II</li>
-                      </ul>
-                     
-
-                    
-                  </p>
-                  <div
-                    class="trainer d-flex justify-content-between align-items-center"
-                  >
-                    <div class="trainer-profile d-flex align-items-center">
-                      <img
-                        src="assets/img/trainers/trainer-2.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                      <span>Amara</span>
-                    </div>
-                    <div class="trainer-rank d-flex align-items-center">
-                      
-                      <i class="bx bx-heart"></i>&nbsp;96
-                    </div>
-                  </div>
+                  <h3><a href="sat-classes.html">SAT Training</a></h3>
+                  <p>The SAT exam measures the verbal, mathematical, and analytical skills of students.</p>
                 </div>
               </div>
             </div>
-            <!-- End Course Item-->
-           
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"
-            >
-              <div class="course-item"> <a href="gre-classes.html">
-                <img
-                  src="assets/img/course-3.jpg"
-                  class="img-fluid"
-                  alt="gre logo"
-                />
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+              <div class="course-item">
+                <img src="assets/img/course-3.jpg" class="img-fluid" alt="GRE logo" />
                 <div class="course-content">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-3"
-                  >
+                  <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4>GRE Training</h4>
-                    <p class="price">₦100,000</p>
+                    <p class="price" data-price="gre"></p> <!-- Dynamic price for GRE -->
                   </div>
-
-                  <h3>
-                    <a href="gre-classes.html"
-                      >GRE (Graduate Record Examination)</a
-                    >
-                  </h3></a>
-                  <p>
-                    The GRE, General Test, is a multiple-choice standardized test, designed to measure the verbal, quantitative, and analytical skills you have developed in the course of your academic career. <br><br> The test intends to primarily aid Graduate Schools (of all fields other than business) to assess the potential of the applicants for advanced study.
-                  </p>
-                  <div
-                    class="trainer d-flex justify-content-between align-items-center"
-                  >
-                    <div class="trainer-profile d-flex align-items-center">
-                      <img
-                        src="assets/img/trainers/trainer-3.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                      <span>Ali</span>
-                    </div>
-                    <div class="trainer-rank d-flex align-items-center">
-                      
-                      <i class="bx bx-heart"></i>&nbsp;97
-                    </div>
-                  </div>
+                  <h3><a href="gre-classes.html">GRE (Graduate Record Examination)</a></h3>
+                  <p>The GRE is a multiple-choice standardized test designed to assess verbal, quantitative, and analytical skills.</p>
                 </div>
               </div>
             </div>
-            
-            <!-- End Course Item-->
           </div>
         </div>
       </section>
-      <!-- End Popular Courses Section -->
 
       <!-- ======= Trainers Section ======= -->
       <section id="trainers" class="trainers">
@@ -647,79 +552,77 @@ PTE
     <footer id="footer">
       <div class="footer-top">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h3>Synergy Lifeline Consulting</h3>
-              <p>
-                <p> <a href="https://goo.gl/maps/9ya5d8BmSUvFZv9u7">4th Floor NICON Insurance Plaza</a>
-                near Coomassie House (First Bank Abuja Regional Hqtrs) or Grand Square, <br>
-                Central Business District,<br>
-                Abuja, Nigeria. <br>
-                <strong>Phone:</strong> <a href="tel:+2348186566561" >+2348186566561</a> <a href="tel:+2348036980584">+2348036980584</a><br />
-                <strong>Email: </strong><a href="mailto:info@synergylifelineconsulting.com">info@synergylifelineconsulting.com</a> <br />
+          <!-- Contact Information and Address on the same line -->
+          <div class="row justify-content-center">
+            <div class="col-12" style="text-align: center; width: 90%; margin: 0 auto;">
+              <p style="font-size: 16px;">
+                <strong>Synergy Lifeline Consulting</strong>&nbsp;|&nbsp;
+                <a href="https://maps.app.goo.gl/WX4ss6JhABt6dnWB9" target="_blank">
+                  4th Floor NICON Insurance Plaza, near Coomassie House (First Bank Abuja Regional Hqtrs) or Grand Square, Central Business District, Abuja, Nigeria.
+                </a>&nbsp;|&nbsp;
+                <strong>Phone:</strong> <a href="tel:+2348186566561">+2348186566561</a>, <a href="tel:+2348036980584">+2348036980584</a>&nbsp;|&nbsp;
+                <strong>Email:</strong> <a href="mailto:info@synergylifelineconsulting.com">info@synergylifelineconsulting.com</a>
               </p>
             </div>
-
-            <div class="col-lg-2 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
+          </div>
+    
+          <!-- Useful Links and Our Services, each on the same line -->
+          <div class="row justify-content-center">
+            <!-- Useful Links on the same line -->
+            <div class="col-12 footer-links" style="text-align: center; width: 90%; margin: 0 auto;">
+              <h4 style="display: inline-block; margin-right: 10px;">Useful Links</h4>
+              <ul style="display: inline; list-style: none; padding-left: 0;">
+                <li style="display: inline; margin-right: 20px;">
                   <i class="bx bx-chevron-right"></i> <a href="index.html">Home</a>
                 </li>
-                <li>
+                <li style="display: inline; margin-right: 20px;">
                   <i class="bx bx-chevron-right"></i> <a href="about.html">About us</a>
                 </li>
-                <li>
+                <li style="display: inline; margin-right: 20px;">
                   <i class="bx bx-chevron-right"></i> <a href="course-details.html">Services</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="terms of service.html">Terms of service</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="terms of service.html">Terms of service</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="privacy.html">Privacy policy</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="privacy.html">Privacy policy</a>
                 </li>
               </ul>
             </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Our Services</h4>
-              <ul>
-                <li>
+    
+            <!-- Our Services on the same line -->
+            <div class="col-12 footer-links" style="text-align: center; width: 90%; margin: 0 auto;">
+              <h4 style="display: inline-block; margin-right: 10px;">Our Services</h4>
+              <ul style="display: inline; list-style: none; padding-left: 0;">
+                <li style="display: inline; margin-right: 20px;">
                   <i class="bx bx-chevron-right"></i> <a href="ielts-classes.html">IELTS classes</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="gre-classes.html">GRE classes</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="gre-classes.html">GRE classes</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="sat-classes.html">SAT classes</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="sat-classes.html">SAT classes</a>
                 </li>
-                <li>
+                <li style="display: inline; margin-right: 20px;">
                   <i class="bx bx-chevron-right"></i> <a href="pte-classes.html">PTE classes</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="gmat-classes.html">GMAT classes</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="gmat-classes.html">GMAT classes</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="toefl-classes.html">TOEFL classes</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="toefl-classes.html">TOEFL classes</a>
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>
-
+    
+      <!-- Footer bottom with copyright and social links -->
       <div class="container d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>Synergy LifeLine Consulting</span></strong
-            >. All Rights Reserved
+            &copy; Copyright <strong><span>Synergy LifeLine Consulting</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
             Designed by <a href="https://bootstrapmade.com/">Victor Moronu</a>
@@ -727,9 +630,10 @@ PTE
         </div>
         <div class="social-links text-center text-md-right pt-3 pt-md-0">
           <a href="https://web.facebook.com/synergylifeline/?_rdc=1&_rdr" class="facebook"><i class="bx bxl-facebook"></i></a>
-          
+        </div>
       </div>
     </footer>
+    
     <!-- End Footer -->
 
     <div id="preloader"></div>

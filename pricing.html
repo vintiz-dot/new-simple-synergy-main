@@ -68,7 +68,7 @@
  
      <!-- Template Main JS File -->
      <script defer src="assets/js/main.js"></script>
- 
+     <script defer src="scripts/prices.js"></script>
     <script defer src="pricing-script.js"></script>
   </head>
 
@@ -217,93 +217,71 @@
         <div><h4><a href="tel:+2348186566561" style="color:white; text-align: center; font-size: 100%; padding-bottom: 25%;"><i class="bi bi-telephone"> </i>Contact Us for All Your Exam Registration </a> </h4> </div>
       </div>
       <!-- ======= Pricing Section ======= -->
-      <section >
-        <div  data-aos="fade-up">
+      <section>
+        <div data-aos="fade-up">
           <div class="box">
-            
-
-            <div class="columns " id="gre-class">
-              <div >           
-                <ul class="price ">
-                  <li class="header bg-light" style="color: #777777; font: size 15px;">G-MAT Group Class</li> 
-                  <li style="
-                  font-size: 36px;
-                  color: #5fcf80;
-                  font-weight: 600;
-                  font-family: Poppins, sans-serif;
-                  margin-bottom: 20px;"><sup>₦</sup>130,000<span style="
-                  color: #777777;
-                  font-size: 16px;
-                  font-weight: 300;">/Course</span></li>
-                 <li>Monday to Friday</li>
-                 <li>12noon to 3:00pm</li>
-                 <li>Study materials Included</li>
-                 <li>5+ full length G-MAT mock exams</li>
-                 <li>Unlimited access to online resources</li>
+            <div class="columns" id="gre-class">
+              <div>           
+                <ul class="price">
+                  <li class="header bg-light" style="color: #777777; font-size: 15px;">G-MAT Group Class</li> 
+                  <li style="font-size: 36px; color: #5fcf80; font-weight: 600; font-family: Poppins, sans-serif; margin-bottom: 20px;">
+                    <sup>₦</sup><span id="gmat-price"></span>
+                    <span style="color: #777777; font-size: 16px; font-weight: 300;">/Course</span>
+                  </li>
+                  <li>Monday to Friday</li>
+                  <li>12noon to 3:00pm</li>
+                  <li>Study materials Included</li>
+                  <li>5+ full length G-MAT mock exams</li>
+                  <li>Unlimited access to online resources</li>
                   <li class="grey"><a href="tel:+2348186566561" class="button btn-buy">Book Now</a></li>
                 </ul>                
               </div>
             </div>
-
+      
             <div class="columns" id="ielts-class">
-              <div >           
+              <div>           
                 <ul class="price">
-                  <li class="header bg-light" style="color: gray; font: size 15px;">IELTS Group Class</li> 
-                  <li style="
-                  font-size: 36px;
-                  color: #5fcf80;
-                  font-weight: 600;
-                  font-family: Poppins, sans-serif;
-                  margin-bottom: 20px;"><sup>₦</sup>80,000<span style="
-                  color: #777777;
-                  font-size: 16px;
-                  font-weight: 300;">/Course</span></li>
-                 <li>Monday, Wednesday, Friday</li>
-                 <li>9:00am to 11:am</li>
-                 <li>Access to study materials</li>
-                 <li>10+ Full length IELTS exams</li>
-                 <li>Interactive class sessions</li>
+                  <li class="header bg-light" style="color: gray; font-size: 15px;">IELTS Group Class</li> 
+                  <li style="font-size: 36px; color: #5fcf80; font-weight: 600; font-family: Poppins, sans-serif; margin-bottom: 20px;">
+                    <sup>₦</sup><span id="ielts-price"></span>
+                    <span style="color: #777777; font-size: 16px; font-weight: 300;">/Course</span>
+                  </li>
+                  <li>Monday, Wednesday, Friday</li>
+                  <li>9:00am to 11:00am</li>
+                  <li>Access to study materials</li>
+                  <li>10+ Full length IELTS exams</li>
+                  <li>Interactive class sessions</li>
                   <li class="grey"><a href="tel:+2348186566561" class="button btn-buy">Book Now</a></li>
                 </ul>                
               </div>
             </div>
-
-            <div class="columns " id="gre-class">
-              <div >           
-                <ul class="price ">
-                  <li class="header bg-light" style="color: #777777; font: size 15px;">GRE Group Class</li> 
-                  <li style="
-                  font-size: 36px;
-                  color: #5fcf80;
-                  font-weight: 600;
-                  font-family: Poppins, sans-serif;
-                  margin-bottom: 20px;"><sup>₦</sup>100,000<span style="
-                  color: #777777;
-                  font-size: 16px;
-                  font-weight: 300;">/Course</span></li>
-                 <li>Monday to Thursday</li>
-                 <li>12noon to 3:00pm</li>
-                 <li>Study materials Included</li>
-                 <li>5+ full length GRE mock exams</li>
-                 <li>Unlimited access to online resources</li>
+      
+            <div class="columns" id="gre-class">
+              <div>           
+                <ul class="price">
+                  <li class="header bg-light" style="color: #777777; font-size: 15px;">GRE Group Class</li> 
+                  <li style="font-size: 36px; color: #5fcf80; font-weight: 600; font-family: Poppins, sans-serif; margin-bottom: 20px;">
+                    <sup>₦</sup><span id="gre-price"></span>
+                    <span style="color: #777777; font-size: 16px; font-weight: 300;">/Course</span>
+                  </li>
+                  <li>Monday to Thursday</li>
+                  <li>12noon to 3:00pm</li>
+                  <li>Study materials Included</li>
+                  <li>5+ full length GRE mock exams</li>
+                  <li>Unlimited access to online resources</li>
                   <li class="grey"><a href="tel:+2348186566561" class="button btn-buy">Book Now</a></li>
                 </ul>                
               </div>
             </div>
-
-            <div class=" columns" id="sat-class">
-              <div >           
+      
+            <div class="columns" id="sat-class">
+              <div>           
                 <ul class="price">
-                  <li class="header bg-light" style="color: #777777; font: size 15px;">SAT Group Class</li> 
-                  <li style="
-                  font-size: 36px;
-                  color: #5fcf80;
-                  font-weight: 600;
-                  font-family: Poppins, sans-serif;
-                  margin-bottom: 20px;"><sup>₦</sup>100,000<span style="
-                  color: #777777;
-                  font-size: 16px;
-                  font-weight: 300;">/Course</span></li>
+                  <li class="header bg-light" style="color: #777777; font-size: 15px;">SAT Group Class</li> 
+                  <li style="font-size: 36px; color: #5fcf80; font-weight: 600; font-family: Poppins, sans-serif; margin-bottom: 20px;">
+                    <sup>₦</sup><span id="sat-price"></span>
+                    <span style="color: #777777; font-size: 16px; font-weight: 300;">/Course</span>
+                  </li>
                   <li>Monday to Thursday</li>
                   <li>9:00am to 12 noon</li>
                   <li>Study materials Included</li>
@@ -313,97 +291,80 @@
                 </ul>                
               </div>
             </div>
-
-            <div class=" columns" id="sat-class">
-              <div >           
+      
+            <div class="columns" id="private-class-2">
+              <div>           
                 <ul class="price">
-                  <li class="header bg-light" style="color: #777777; font: size 15px;">1v1 Personal Class</li> 
-                  <li style="
-                  font-size: 36px;
-                  color: #5fcf80;
-                  font-weight: 600;
-                  font-family: Poppins, sans-serif;
-                  margin-bottom: 20px;"><sup>₦</sup>96,000<span style="
-                  color: #777777;
-                  font-size: 16px;
-                  font-weight: 300;">/Month</span></li>
+                  <li class="header bg-light" style="color: #777777; font-size: 15px;">1v1 Personal Class</li> 
+                  <li style="font-size: 36px; color: #5fcf80; font-weight: 600; font-family: Poppins, sans-serif; margin-bottom: 20px;">
+                    <sup>₦</sup><span id="personal-class-2-price"></span>
+                    <span style="color: #777777; font-size: 16px; font-weight: 300;">/Month</span>
+                  </li>
                   <li>2 Contacts per week</li>
                   <li>2 Hours per contact</li>
-                  <li><strong>Location: <br> Synergy Lifeline Classroom</strong> </li>
+                  <li><strong>Location: Synergy Lifeline Classroom</strong></li>
                   <li>Personalized Syllabus</li>
                   <li class="grey"><a href="tel:+2348186566561" class="button btn-buy">Book Now</a></li>
                 </ul>                
               </div>
             </div>
-
-            <div class=" columns" id="sat-class">
-              <div >           
+      
+            <div class="columns" id="private-class-3">
+              <div>           
                 <ul class="price">
-                  <li class="header bg-light" style="color: #777777; font: size 15px;">1v1 Personal Class</li> 
-                  <li style="
-                  font-size: 36px;
-                  color: #5fcf80;
-                  font-weight: 600;
-                  font-family: Poppins, sans-serif;
-                  margin-bottom: 20px;"><sup>₦</sup>128,000<span style="
-                  color: #777777;
-                  font-size: 16px;
-                  font-weight: 300;">/Month</span></li>
+                  <li class="header bg-light" style="color: #777777; font-size: 15px;">1v1 Personal Class</li> 
+                  <li style="font-size: 36px; color: #5fcf80; font-weight: 600; font-family: Poppins, sans-serif; margin-bottom: 20px;">
+                    <sup>₦</sup><span id="personal-class-3-price"></span>
+                    <span style="color: #777777; font-size: 16px; font-weight: 300;">/Month</span>
+                  </li>
                   <li>2 Contacts per week</li>
                   <li>2 Hours per contact</li>
-                  <li><strong>Location: <br> Client's preferred venue</strong> </li>
+                  <li><strong>Location: Client's preferred venue</strong></li>
                   <li>Personalized Syllabus</li>
                   <li class="grey"><a href="tel:+2348186566561" class="button btn-buy">Book Now</a></li>
                 </ul>                
               </div>
             </div>
-
-            
-            <div class=" columns" id="sat-class">
-              <div >           
+      
+            <div class="columns" id="private-class-4">
+              <div>           
                 <ul class="price">
-                  <li class="header bg-light" style="color: #777777; font: size 15px;">1v1 Personal Class</li> 
-                  <li style="
-                  font-size: 36px;
-                  color: #5fcf80;
-                  font-weight: 600;
-                  font-family: Poppins, sans-serif;
-                  margin-bottom: 20px;"><sup>₦</sup>144,000<span style="
-                  color: #777777;
-                  font-size: 16px;
-                  font-weight: 300;">/Month</span></li>
+                  <li class="header bg-light" style="color: #777777; font-size: 15px;">1v1 Personal Class</li> 
+                  <li style="font-size: 36px; color: #5fcf80; font-weight: 600; font-family: Poppins, sans-serif; margin-bottom: 20px;">
+                    <sup>₦</sup><span id="personal-class-4-price"></span>
+                    <span style="color: #777777; font-size: 16px; font-weight: 300;">/Month</span>
+                  </li>
                   <li>3 Contacts per week</li>
                   <li>2 Hours per contact</li>
-                  <li><strong>Location: <br> Synergy Lifeline Classroom</strong> </li>
+                  <li><strong>Location: Synergy Lifeline Classroom</strong></li>
                   <li>Personalized Syllabus</li>
                   <li class="grey"><a href="tel:+2348186566561" class="button btn-buy">Book Now</a></li>
                 </ul>                
               </div>
             </div>
-
-            <div class=" columns" id="sat-class">
-              <div >           
+      
+            <div class="columns" id="private-class-5">
+              <div>           
                 <ul class="price">
-                  <li class="header bg-light" style="color: #777777; font: size 15px;">1v1 Personal Class</li> 
-                  <li style="
-                  font-size: 36px;
-                  color: #5fcf80;
-                  font-weight: 600;
-                  font-family: Poppins, sans-serif;
-                  margin-bottom: 20px;"><sup>₦</sup>192,000<span style="
-                  color: #777777;
-                  font-size: 16px;
-                  font-weight: 300;">/Month</span></li>
+                  <li class="header bg-light" style="color: #777777; font-size: 15px;">1v1 Personal Class</li> 
+                  <li style="font-size: 36px; color: #5fcf80; font-weight: 600; font-family: Poppins, sans-serif; margin-bottom: 20px;">
+                    <sup>₦</sup><span id="personal-class-5-price"></span>
+                    <span style="color: #777777; font-size: 16px; font-weight: 300;">/Month</span>
+                  </li>
                   <li>3 Contacts per week</li>
                   <li>2 Hours per contact</li>
-                  <li><strong>Location: <br> Client's preferred venue</strong> </li>
+                  <li><strong>Location: Client's preferred venue</strong></li>
                   <li>Personalized Syllabus</li>
                   <li class="grey"><a href="tel:+2348186566561" class="button btn-buy">Book Now</a></li>
                 </ul>                
               </div>
             </div>
-
-           
+      
+          </div>
+        </div>
+      </section>
+      
+         
       <!-- End Pricing Section -->
 
          <!-- Begining of more pricing popuo -->
@@ -491,107 +452,90 @@
     <footer id="footer">
       <div class="footer-top">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h3>Synergy Lifeline Consulting</h3>
-              <p></p>
-              <p>
-                <a href="https://goo.gl/maps/9ya5d8BmSUvFZv9u7"
-                  >4th Floor NICON Insurance Plaza</a
-                >
-                near Coomassie House (First Bank Abuja Regional Hqtrs) or Grand
-                Square, <br />
-                Central Business District,<br />
-                Abuja, Nigeria. <br />
-                <strong>Phone:</strong>
-                <a href="tel:+2348186566561">+2348186566561</a>
-                <a href="tel:+2348036980584">+2348036980584</a><br />
-                <strong>Email: </strong
-                ><a href="mailto:info@synergylifelineconsulting.com"
-                  >info@synergylifelineconsulting.com</a
-                >
-                <br />
+          <!-- Contact Information and Address on the same line -->
+          <div class="row justify-content-center">
+            <div class="col-12" style="text-align: center; width: 90%; margin: 0 auto;">
+              <p style="font-size: 16px;">
+                <strong>Synergy Lifeline Consulting</strong>&nbsp;|&nbsp;
+                <a href="https://maps.app.goo.gl/WX4ss6JhABt6dnWB9" target="_blank">
+                  4th Floor NICON Insurance Plaza, near Coomassie House (First Bank Abuja Regional Hqtrs) or Grand Square, Central Business District, Abuja, Nigeria.
+                </a>&nbsp;|&nbsp;
+                <strong>Phone:</strong> <a href="tel:+2348186566561">+2348186566561</a>, <a href="tel:+2348036980584">+2348036980584</a>&nbsp;|&nbsp;
+                <strong>Email:</strong> <a href="mailto:info@synergylifelineconsulting.com">info@synergylifelineconsulting.com</a>
               </p>
             </div>
-
-            <div class="col-lg-2 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="index.html">Home</a>
+          </div>
+    
+          <!-- Useful Links and Our Services, each on the same line -->
+          <div class="row justify-content-center">
+            <!-- Useful Links on the same line -->
+            <div class="col-12 footer-links" style="text-align: center; width: 90%; margin: 0 auto;">
+              <h4 style="display: inline-block; margin-right: 10px;">Useful Links</h4>
+              <ul style="display: inline; list-style: none; padding-left: 0;">
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="index.html">Home</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="about.html">About us</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="about.html">About us</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="course-details.html">Services</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="course-details.html">Services</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="terms of service.html">Terms of service</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="terms of service.html">Terms of service</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="privacy.html">Privacy policy</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="privacy.html">Privacy policy</a>
                 </li>
               </ul>
             </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Our Services</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="ielts-classes.html">IELTS classes</a>
+    
+            <!-- Our Services on the same line -->
+            <div class="col-12 footer-links" style="text-align: center; width: 90%; margin: 0 auto;">
+              <h4 style="display: inline-block; margin-right: 10px;">Our Services</h4>
+              <ul style="display: inline; list-style: none; padding-left: 0;">
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="ielts-classes.html">IELTS classes</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="gre-classes.html">GRE classes</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="gre-classes.html">GRE classes</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="sat-classes.html">SAT classes</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="sat-classes.html">SAT classes</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="pte-classes.html">PTE classes</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="pte-classes.html">PTE classes</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="gmat-classes.html">GMAT classes</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="gmat-classes.html">GMAT classes</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="toefl-classes.html">TOEFL classes</a>
+                <li style="display: inline; margin-right: 20px;">
+                  <i class="bx bx-chevron-right"></i> <a href="toefl-classes.html">TOEFL classes</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="container d-md-flex py-4" style="margin-bottom: 120px;" >
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright
-          <strong><span>Synergy LifeLine Consulting</span></strong
-          >. All Rights Reserved
+    
+      <!-- Footer bottom with copyright and social links -->
+      <div class="container d-md-flex py-4">
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Synergy LifeLine Consulting</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">Victor Moronu</a>
+          </div>
         </div>
-        <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">Victor Moronu</a>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href="https://web.facebook.com/synergylifeline/?_rdc=1&_rdr" class="facebook"><i class="bx bxl-facebook"></i></a>
         </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a
-          href="https://web.facebook.com/synergylifeline/?_rdc=1&_rdr"
-          class="facebook"
-          ><i class="bx bxl-facebook"></i
-        ></a>
       </div>
     </footer>
+    
+    
+    
     <!-- End Footer -->
 
     <div id="preloader" style="z-index: 1500"></div>
