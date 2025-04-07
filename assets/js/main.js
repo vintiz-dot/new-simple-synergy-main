@@ -6,10 +6,71 @@
 */
 (function() {
   "use strict";
-
+  document.addEventListener("DOMContentLoaded", function() {
+    // Utility function to load a template file
+    async function loadTemplate(url) {
+      console.log("Loading:", url);
+      const response = await fetch(url);
+      return await response.text();
+    }
+  
+    // Function to set the active nav link based on the current page
+    function setActiveNav() {
+      let currentFile = window.location.pathname.split("/").pop();
+      if (!currentFile || currentFile === "") {
+        currentFile = "index.html";
+      }
+      // Remove any query string or hash
+      currentFile = currentFile.split("?")[0].split("#")[0];
+      console.log("Current file:", currentFile);
+  
+      // Select all links inside the collapse container (adjust if needed)
+      const navLinks = document.querySelectorAll("#navbarContent a");
+      navLinks.forEach(function(link) {
+        let linkFile = link.getAttribute("href").split("/").pop();
+        linkFile = linkFile.split("?")[0].split("#")[0];
+        console.log("Checking link:", linkFile);
+        if (linkFile === currentFile) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    }
+  
+    // Load header and footer partials, then inject them and initialize Bootstrap components
+    Promise.all([
+      loadTemplate('partials/header.handlebars'),
+      loadTemplate('partials/footer.handlebars')
+    ]).then(function(templates) {
+      // Register partials if needed elsewhere
+      Handlebars.registerPartial('header', templates[0]);
+      Handlebars.registerPartial('footer', templates[1]);
+  
+      // Inject the partials into the placeholders
+      document.getElementById('header-placeholder').innerHTML = Handlebars.compile("{{> header}}")();
+      document.getElementById('footer-placeholder').innerHTML = Handlebars.compile("{{> footer}}")();
+  
+      // After injection, initialize the Bootstrap collapse component on the navbar
+      const navbarCollapse = document.getElementById('navbarContent');
+      if (navbarCollapse) {
+        new bootstrap.Collapse(navbarCollapse, { toggle: false });
+      }
+  
+      // Set the active nav link based on the current page
+      setActiveNav();
+    }).catch(function(error) {
+      console.error("Error loading partials:", error);
+    });
+  });
+  
   /**
    * Easy selector helper function
    */
+  
+
+
+  
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {

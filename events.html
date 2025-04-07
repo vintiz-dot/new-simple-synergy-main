@@ -45,9 +45,12 @@
   <!-- Then Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <!-- Include Handlebars from CDN -->
+   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
 
   <!-- JavaScript for form handling -->
-  <script defer src="scripts/formHandler.js"></script>
+  <script type="module" defer src="scripts/formHandler.js"></script>
+
 </head>
 
 <body>
@@ -64,36 +67,8 @@
   <!-- End of call us footer -->
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="index.html">Synergy LifeLine Consulting</a></h1>
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="active" href="courses.html">Courses</a></li>
-          <li><a href="trainers.html">Trainers</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li class="dropdown">
-            <a href="#"><span>Our Programs</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="course-details.html">IELTS</a></li>
-              <li><a href="pricing.html#gre-exam">GRE</a></li>
-              <li><a href="pricing.html#gmat-exam">GMAT</a></li>
-              <li><a href="pricing.html#toefl-exam">TOEFL</a></li>
-              <li><a href="pricing.html#pte-exam">PTE</a></li>
-              <li><a href="pricing.html#sat-exam">SAT</a></li>
-              <li><a href="cgfns-classes.html">CGFNS</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <a href="courses.html" class="get-started-btn">Get Started</a>
-    </div>
-  </header>
+    <!-- Placeholders for header -->
+    <div id="header-placeholder"></div>
   <!-- End Header -->
 
   <main id="main">
@@ -122,6 +97,18 @@
           <div class="invalid-feedback">Please enter your date of birth.</div>
         </div>
 
+         <!-- Gender Selection -->
+         <div class="form-group mb-4">
+          <label for="gender">Gender</label>
+          <select class="form-control" id="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="invalid-feedback">Please select your gender.</div>
+        </div>
+
         <div class="form-group mb-4">
           <label for="email">Email Address</label>
           <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
@@ -140,6 +127,7 @@
           <div class="invalid-feedback">Please enter your address.</div>
         </div>
 
+       
         <!-- Registration Type Selection -->
         <div class="form-group mb-4">
           <label for="registrationType">I want to register for:</label>
@@ -209,7 +197,6 @@
               </select>
               <div class="invalid-feedback">Please select the schedule for private classes.</div>
             </div>
-
           </div>
 
           <div class="form-group mb-4">
@@ -234,16 +221,6 @@
             <div class="invalid-feedback">Please select the exam type.</div>
           </div>
 
-          <div id="ieltsType" class="form-group mb-4" style="display: none;">
-            <label for="ieltsTypeSelect">Select IELTS Exam Type</label>
-            <select class="form-control" id="ieltsTypeSelect">
-              <option value="" disabled selected>Select IELTS type</option>
-              <option value="academic">Academic</option>
-              <option value="general">General Training</option>
-            </select>
-            <div class="invalid-feedback">Please select your IELTS exam type.</div>
-          </div>
-
           <!-- IELTS Mode Selection -->
           <div id="ieltsOptions" class="form-group mb-4" style="display: none;">
             <label for="ieltsMode">Select IELTS Mode</label>
@@ -257,7 +234,7 @@
 
           <!-- IELTS Exam Type Selection -->
           <div id="ieltsCategory" class="form-group mb-4" style="display: none;">
-            <label for="ieltsCategory">Select IELTS Exam Type</label>
+            <label for="ieltsCategoryExam">Select IELTS Exam Type</label>
             <select class="form-control" id="ieltsCategoryExam" required>
               <option value="" disabled selected>Select IELTS Exam Type</option>
               <option value="academic">Academic</option>
@@ -289,66 +266,52 @@
         <button type="button" id="submit-button" class="btn btn-primary">Register</button>
       </form>
     </div>
-
-    <!-- Include the JavaScript at the end of the body -->
-    <script src="scripts/formHandler.js"></script>
   </main>
   
   <!-- Footer Section -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Synergy Lifeline Consulting</h3>
-            <p>
-              <a href="https://goo.gl/maps/9ya5d8BmSUvFZv9u7">4th Floor NICON Insurance Plaza</a><br>
-              Central Business District,<br>Abuja, Nigeria.<br>
-              <strong>Phone:</strong> <a href="tel:+2348186566561">+2348186566561</a><br>
-              <strong>Email:</strong> <a href="mailto:info@synergylifelineconsulting.com">info@synergylifelineconsulting.com</a><br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="course-details.html">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="terms of service.html">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy.html">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="ielts-classes.html">IELTS classes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="gre-classes.html">GRE classes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="sat-classes.html">SAT classes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="pte-classes.html">PTE classes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="gmat-classes.html">GMAT classes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="toefl-classes.html">TOEFL classes</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Synergy LifeLine Consulting</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">Designed by <a href="https://bootstrapmade.com/">Victor Moronu</a></div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://web.facebook.com/synergylifeline/" class="facebook"><i class="bx bxl-facebook"></i></a>
-      </div>
-    </div>
-  </footer>
-
-
+  <div id="footer-placeholder"></div>
+    
+  <script>
+    // Utility function to load a template file
+    function loadTemplate(url) {console.log(url)
+      return fetch(url).then(response => response.text());
+    }
+    
+    // Load and register partials
+    Promise.all([
+      loadTemplate('partials/header.handlebars'),
+      loadTemplate('partials/footer.handlebars')
+    ]).then(function(templates) {
+      // Register the partials
+      Handlebars.registerPartial('header', templates[0]);
+      Handlebars.registerPartial('footer', templates[1]);
+      
+      // Create a main template that uses the partials
+      var mainTemplate = `
+        {{> header}}
+        {{{body}}}
+        {{> footer}}
+      `;
+      
+      // Compile the main template
+      var template = Handlebars.compile(mainTemplate);
+      
+      // Get the current page's main content as HTML
+      var bodyContent = document.querySelector('main').innerHTML;
+      
+      // Render the template with the body content passed in
+      var finalHtml = template({ body: bodyContent });
+      
+      // Replace the entire body with the rendered HTML or inject partials into placeholders
+      // Option 1: Replace entire body:
+      // document.body.innerHTML = finalHtml;
+      // Option 2: Render partials into placeholders:
+      document.getElementById('header-placeholder').innerHTML = Handlebars.compile("{{> header}}")();
+      document.getElementById('footer-placeholder').innerHTML = Handlebars.compile("{{> footer}}")();
+    }).catch(function(error) {
+      console.error("Error loading partials:", error);
+    });
+  </script>
 </body>
 
 </html>
