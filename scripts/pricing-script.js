@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Hourly rates (these remain static)
   const hourlyRates = {
-    office: 8000,
-    client: 10000,
+    office: 10000,
+    client: 11000,
   };
 
   // Function to calculate price based on user selections

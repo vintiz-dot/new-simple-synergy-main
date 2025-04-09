@@ -11,7 +11,7 @@ const classFees = {
       SAT: 100000
     },
     privateClass: {
-      center: 9000,
+      center: 10000,
       'client-location': 11000
     }
   };
